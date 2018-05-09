@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11.1
+
+    steps:
+      - checkout
+      - run:
+        name: Update NPM
+        command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+        name: Install Dependencies
+        command: 'npm install'  
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Test Action
+          command: npm test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
