@@ -1,7 +1,8 @@
-var expect = require('chai').expect
+var chai = require('chai')
 var Action = require('../server.js')
 var chaiHttp = require('chai-http');
 
+var expect = chai.expect;
 chai.use(chaiHttp);
 
 describe('Assistant Action', function() {
