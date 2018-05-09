@@ -21,9 +21,11 @@ jobs:
           name: Test Action
           command: 'npm test'
   deploy:
-      steps:
-        - run: 'Deploy to Glitch'
-        - command: 'glitch-deploy'
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - run: 'Deploy to Glitch'
+      - command: 'glitch-deploy'
 
 
 workflows:
