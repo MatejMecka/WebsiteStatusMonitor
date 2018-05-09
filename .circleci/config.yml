@@ -24,8 +24,9 @@ jobs:
     docker:
       - image: circleci/node:8.11.1
     steps:
-      - run: 'Deploy to Glitch'
-      - command: 'glitch-deploy'
+      - run: 
+        - name: Deploy to Glitch
+        - command: 'glitch-deploy'
 
 
 workflows:
