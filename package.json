@@ -1,0 +1,30 @@
+{
+  "name": "websiteStatusMonitor",
+  "version": "1.0.0",
+  "description": "Google Assistant Action that Checks for you if a website is down.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "package.json": "^2.0.1",
+    "request": "^2.83.0"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/MatejMecka/WebsiteStatusMonitor"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "google assistant",
+    "action",
+    "actionOnGoogle",
+    "website",
+    "checker"
+  ]
+}
