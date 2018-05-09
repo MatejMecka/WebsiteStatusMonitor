@@ -11,10 +11,6 @@ app.get('/version', (req, res) => {
     res.status(200).send("Website Status Monitor. Version 1.0.0");
 });
 
-app.get('/', (req, res) => {
-    res.status(200).send("Hello from APIAI Webhook Integration.");
-});
-
 /* Handling all messenges */
 app.post('/webhook', (req, res) => {
   console.log(req.body);
@@ -80,3 +76,4 @@ const server = app.listen(process.env.PORT || 5000, () => {
 });
 
 
+module.exports = app
