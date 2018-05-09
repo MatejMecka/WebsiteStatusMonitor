@@ -17,16 +17,12 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
-  test:
-    steps:
-      - checkout
       - run:
-        name: Test Action
-        command: 'npm test'
+          name: Test Action
+          command: 'npm test'
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
-      - test
