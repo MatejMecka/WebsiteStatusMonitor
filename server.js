@@ -76,3 +76,4 @@ const server = app.listen(process.env.PORT || 5000, () => {
 });
 
 
+module.exports = app
