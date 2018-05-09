@@ -20,6 +20,11 @@ jobs:
       - run:
           name: Test Action
           command: 'npm test'
+  deploy:
+      steps:
+        - run: 'Deploy to Glitch'
+        - command: 'glitch-deploy'
+
 
 workflows:
   version: 2
