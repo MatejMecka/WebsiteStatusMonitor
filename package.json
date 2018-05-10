@@ -1,7 +1,8 @@
 {
   "name": "websiteStatusMonitor",
   "version": "1.0.0",
-  "description": "Google Assistant Action that Checks for you if a website is down.",
+  "description":
+    "Google Assistant Action that Checks for you if a website is down.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -21,7 +22,7 @@
     "eslint-plugin-import": "^2.8.0",
     "mocha": "^4.1.0",
     "prettier-eslint-cli": "^4.4.0",
-    "glitch-deploy":"1.1.3"
+    "glitch-deploy": "1.1.3"
   },
   "engines": {
     "node": "8.x"
