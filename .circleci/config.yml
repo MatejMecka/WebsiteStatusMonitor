@@ -22,8 +22,8 @@ jobs:
           command: 'npm test'
           
   deploy:
-    machine:
-      enabled: true
+    docker:
+      - image: circleci/node:8.11.1
     steps:
       - checkout
       - run:
