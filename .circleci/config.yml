@@ -28,7 +28,7 @@ jobs:
       - checkout
       - run:
           name: Install Glitch Deploy
-          command: npm install glitch-deploy --global
+          command: sudo npm install glitch-deploy --global
       - run:
           name: Deploy to Glitch
           command: glitch-deploy
